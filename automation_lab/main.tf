@@ -10,7 +10,7 @@ data "template_file" "index" {
 }
 resource "google_compute_instance" "web" {
   name = "web-server-${var.env}"
-  machine_type = "f1-micro"
+  machine_type = "e2-medium"
   zone = "us-central1-a"
   network_interface {
       network = "default"
